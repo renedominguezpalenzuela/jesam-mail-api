@@ -5,8 +5,10 @@ module.exports = {
     // console.log(ctx.request.body);
     //const postParams = JSON.parse(ctx.request.body);
 
-    const postParams = ctx.request.body;
-    // const postParams = JSON.parse(ctx.request.body);
+    // const postParamsStr = ctx.request.body;
+     const postParams = JSON.parse(ctx.request.body);
+
+    strapi.log.debug(postParams);
 
     const vto = postParams.to;
 
